@@ -29,6 +29,11 @@ jobs:
     - run: npm ci
     - run: npm run test:ci
     - run: npm run build:prod
+    - uses: microsoft/variable-substitution@v1
+      with:
+        files: 'dist/auth-demo/assets/config.json'
+      env:
+        facebookAppId: ${{ secrets.FACEBOOK_APP_ID }}
     - name: Deploy
       if: success()
       uses: peaceiris/actions-gh-pages@v3
