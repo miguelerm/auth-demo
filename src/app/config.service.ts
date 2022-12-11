@@ -18,7 +18,6 @@ export class ConfigService {
     return this.http.get('./assets/config.json')
       .pipe(tap((config) => {
         this.config.next(config as IConfig);
-        console.log('config', JSON.stringify(config));
       }))
   }
 }
@@ -32,4 +31,5 @@ export interface IConfig
 {
   facebookAppId: string;
   facebookApiVersion: string;
+  googleClientId: string;
 }

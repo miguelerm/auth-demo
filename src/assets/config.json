@@ -1,4 +1,5 @@
 {
-    "facebookAppId": "{facebookAppId}",
-    "facebookApiVersion": "v15.0"
+    "facebookAppId": "",
+    "facebookApiVersion": "v15.0",
+    "googleClientId": ""
 }

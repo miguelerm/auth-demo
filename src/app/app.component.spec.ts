@@ -3,6 +3,16 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing'
 import { AppComponent } from './app.component';
 
+window.google = {
+  accounts: {
+    id: {
+      renderButton: () => void 0,
+      initialize: () => void 0,
+      prompt: () => void 0
+    }
+  }
+}
+
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -25,6 +35,7 @@ describe('AppComponent', () => {
   it(`should have as title 'auth-demo'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
+    console.log(app);
     expect(app.title).toEqual('auth-demo');
   });
 
